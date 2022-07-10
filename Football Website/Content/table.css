@@ -1,0 +1,15 @@
+table {
+       border-collapse: collapse;
+       width: 100%;
+      }
+
+td    {
+       border-style: solid;
+       border-width: thin;
+       padding: 10px;
+      }
+
+.tableheading {text-align: left;
+			   font-weight: bold
+			  }
+

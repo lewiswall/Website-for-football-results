@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Football Team Results HomePage</title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Scripts/JqueryFootball.js"></script>
+	<link rel="StyleSheet" href="Content/FootballResults.css" type="text/css">
+</head>
+<body>
+	<div id="navbar">
+        <div id="navbar-text">
+            <p>Football Results for 2018/19 Season</p>
+		</div>
+	</div>
+		<div class="section">
+			<div class="th-filter">
+				<p>League Select</p>
+				
+				<label for="E1">Premier League</label>
+				<input type="radio" id="E1" name="league" value="E0" onchange="fillTeamCombos('E0')"><br>
+				
+				<label for="S1">Spanish La Liga</label>
+				<input type="radio" id="S1" name="league" value="SP1" onchange="fillTeamCombos('SP1')"><br>
+				
+				<label for="I0">Serie A</label>
+				<input type="radio" id="I1" name="league" value="I1" onchange="fillTeamCombos('I1')">
+				
+			</div>
+			<div class="th-filter">
+				<p>Date Select</p>
+				
+				<label for="minDate">Min Date</label>
+				<input type="date" id="minDate" name="minDate"><br><br>
+				
+				<label for="maxDate">Max Date</label>
+				<input type="date" id="maxDate" name="maxDate">
+				
+			</div>
+			<div class="th-filter">
+				<p>Team Select</p>
+				
+				<label for="home">Home Team</label>
+				<select id="homeTeamSelect" name="home">
+				<option value="Any">Any</option>
+				</select><br><br>
+				
+				<label for="away">Away Team</label>
+				<select id="awayTeamSelect" name="away">
+				<option value="Any">Any</option>
+				</select><br><br>
+				
+				</select>		
+			</div>
+			<div class="th-filter" id="lastFilter">
+				<p>Get Data</p>
+				
+				<div id="FetchData">
+					<input type="button" value="Fetch All Data" onclick="getAllTeams();"/><br><br>
+					<input type="button" value="Fetch Filtered Data" onclick="getFilteredTeams();"/><br><br>
+					<input type="button" value="Create New Match" onclick="createNewMatch()"/>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="allTeams">
+	</div>
+	
+	<div id="editFormBox">
+	</div>
+</body>
+</html>
